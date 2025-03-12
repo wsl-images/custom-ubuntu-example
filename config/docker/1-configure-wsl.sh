@@ -10,10 +10,10 @@ cp /tmp/config/wsl/wsl-distribution.conf /etc/wsl-distribution.conf
 chmod 0644 /etc/wsl-distribution.conf
 
 echo "Configuring WSL Out Of The Box Experience"
-cp /tmp/config/wsl/wsl-setup /usr/lib/wsl/wsl-setup && chmod 0755 /usr/lib/wsl/wsl-setup
+mkdir -p /usr/lib/wsl && cp /tmp/config/wsl/wsl-setup /usr/lib/wsl/wsl-setup && chmod 0755 /usr/lib/wsl/wsl-setup
 
 echo "Configuring WSL Windows Terminal Icon"
-mkdir -p /usr/lib/wsl && cp /tmp/config/wsl/terminal-icon/ubuntu.ico /usr/lib/wsl/ubuntu.ico
+mkdir -p /usr/share/wsl && cp /tmp/config/wsl/terminal-icon/ubuntu.ico /usr/share/wsl/ubuntu.ico
 
 echo "Configuring WSL Windows Terminal Profile"
-mkdir -p /usr/lib/wsl && cp /tmp/config/wsl/terminal-profile.json /usr/share/wsl/terminal-profile.json
+mkdir -p /usr/share/wsl && cp /tmp/config/wsl/terminal-profile.json /usr/share/wsl/terminal-profile.json
